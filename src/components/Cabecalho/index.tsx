@@ -13,21 +13,22 @@ export const Header = () => {
   }).format(currentDate);
 
   return (
-    <div className={styles.cabecalho}>
-      
-      <div className={styles.boxImagem}>
-        <Image src={foto} alt="Logo" width={50} height={50} />
-        <div>
-          <h3>FocalPoint</h3>
+    <div className={styles.container}>
+      <div className={styles.cabecalho}>
+        <div className={styles.boxImagem}>
+          <Image src={foto} alt="Logo" width={50} height={50} />
+          <div>
+            <h3>FocalPoint</h3>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.text}>
-        <h1>Bem-vindo de volta, Marcus</h1>
-      </div>
+        <div className={styles.text}>
+          <h1>Bem-vindo de volta, Marcus</h1>
+        </div>
 
-      <div className={styles.subtext}>
-        <p>{formattedDate}</p>
+        <div className={styles.subtext}>
+          <p>{formattedDate}</p>
+        </div>
       </div>
     </div>
   );

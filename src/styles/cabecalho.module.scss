@@ -1,5 +1,9 @@
+.container{
+  padding: 2rem;  
+  margin: auto;
+}
+
 .cabecalho {  
-  padding: 20px;  
   border-bottom: solid #D7DDE9;
   display: flex;
   flex-direction: row;
@@ -34,6 +38,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .box{
+    padding: auto;
+  }
+
   .cabecalho {
     width: auto;
     padding: auto;

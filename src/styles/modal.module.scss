@@ -1,10 +1,127 @@
-.modal {  
-  position: fixed;  
-  top: 50%;  
-  left: 50%;  
-  transform: translate(-50%, -50%);  
-  background: white;  
-  padding: 20px;  
-  border-radius: 8px;  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal h2 {
+  font-size: 24px;
+  color: #000000;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+}
+
+.modal form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal input {
+  width: 92%;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #d7dde9;
+  font-size: medium;
+}
+
+.buttonBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonAdd {
+  flex: 1;
+  background: linear-gradient(90deg, #0796d3 0%, #53c0f0 68.65%);
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  font-family: Arial, sans-serif;
+}
+
+.buttonAdd:hover {
+  background: linear-gradient(90deg, #53c0f0 0%, #0796d3 68.65%);
+}
+
+.buttonCancel {
+  flex: 1;
+  color: #000000;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 1px solid #e7eefb;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  font-family: Arial, sans-serif;
+}
+
+.buttonCancel:hover {
+  background: #b8bdc7;
+  color: #ffffff;
+}
+
+.buttonDelete {
+  flex: 1;
+  background: linear-gradient(90deg, #d30707 0%, #f05353 68.65%);
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 1px solid #e7eefb;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  font-family: Arial, sans-serif;
+}
+
+.buttonDelete:hover {
+  background: linear-gradient(90deg, #f05353 0%, #d30707 68.65%);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
 }

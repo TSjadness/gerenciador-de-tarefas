@@ -13,7 +13,7 @@
 
 .text{
   font-size: 24px;  
-  color: #1A1A1A;  
+  color: #000000;
   font-weight: 500; 
   line-height: 29.04px;
   font: Arial, sans-serif;
@@ -21,13 +21,13 @@
 
 .subtext{
   font-size: 16px;  
-  color: #1A1A1A;  
+  color: #000000;
   font-weight: 400; 
   font: Arial, sans-serif;
 }
 .boxImagem  {  
   font-size: 24px;  
-  color: #1A1A1A;  
+  color: #000000;
   font-weight: 600; 
   display: flex;
   flex-direction: row; 
@@ -58,14 +58,11 @@
 
 @media screen and (max-width: 768px) {
   .cabecalho {
-    width: 85%;
-    margin: auto;
-    padding: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: start;
     justify-content: center;
     gap: 0rem;
   }

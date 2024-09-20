@@ -1,0 +1,73 @@
+.cabecalho {  
+  padding: 20px;  
+  border-bottom: solid #D7DDE9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}  
+
+.text{
+  font-size: 24px;  
+  color: #1A1A1A;  
+  font-weight: 500; 
+  line-height: 29.04px;
+  font: Arial, sans-serif;
+}
+
+.subtext{
+  font-size: 16px;  
+  color: #1A1A1A;  
+  font-weight: 400; 
+  font: Arial, sans-serif;
+}
+.boxImagem  {  
+  font-size: 24px;  
+  color: #1A1A1A;  
+  font-weight: 600; 
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .cabecalho {
+    width: auto;
+    padding: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 5rem;
+
+  }
+
+  .text {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    width: 85%;
+    margin: auto;
+    padding: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0rem;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .subtext {
+    font-size: 20px;
+  }
+}
+

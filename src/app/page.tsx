@@ -1,11 +1,12 @@
 
-import TaskList from "./components/gerenciadorList";
-import "./styles//globals.scss";
+import { Header } from "@/components/Cabecalho";
+import TaskList from "../components/gerenciadorList";
+import "../styles/globals.scss";
 
 export default function Home() {
   return (
     <main>
-      <h1>Bem-vindo de volta, Marcus</h1>
+      <Header />
       <TaskList />
     </main>
   );

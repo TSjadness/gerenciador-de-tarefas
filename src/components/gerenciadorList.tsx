@@ -58,7 +58,6 @@ const TaskList = () => {
     setTasks(updatedTasks);
     setCompletedTasks(updatedCompletedTasks);
 
-    // Save both tasks and completedTasks to localStorage
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
     localStorage.setItem(
       "completedTasks",
@@ -73,77 +72,80 @@ const TaskList = () => {
   };
 
   return (
-    <div className={styles.box}>
-      <div className={styles.container}>
-        <div className={styles.taskList}>
-          <h2 className={styles.text}>Suas tarefas de hoje</h2>
-          {tasks.map((task, index) => (
-            <div key={index} className={styles.taskItem}>
-              <div className={styles.boxText}>
-                <input
-                  type="checkbox"
-                  className={styles.checkboxCustom}
-                  onChange={() => completeTask(index)}
-                />
-                <label>{task}</label>
+    <div>
+      <div className={styles.box}>
+        <div className={styles.container}>
+          <div className={styles.taskList}>
+            <h2 className={styles.text}>Suas tarefas de hoje</h2>
+            {tasks.map((task, index) => (
+              <div key={index} className={styles.taskItem}>
+                <div className={styles.boxText}>
+                  <input
+                    type="checkbox"
+                    className={styles.checkboxCustom}
+                    onChange={() => completeTask(index)}
+                  />
+                  <label>{task}</label>
+                </div>
+                <button
+                  className={styles.buttonIcon}
+                  onClick={() => openDeleteModal(index, false)}
+                >
+                  <Image
+                    className={styles.icon}
+                    src={trash}
+                    alt="trash"
+                    width={20}
+                    height={20}
+                  />
+                </button>
               </div>
-              <button
-                className={styles.buttonIcon}
-                onClick={() => openDeleteModal(index, false)}
-              >
-                <Image
-                  className={styles.icon}
-                  src={trash}
-                  alt="trash"
-                  width={20}
-                  height={20}
-                />
-              </button>
-            </div>
-          ))}
+            ))}
 
-          {showModal && (
-            <TaskModal
-              addTask={addTask}
-              closeModal={() => setShowModal(false)}
-            />
-          )}
-          {showDeleteModal && (
-            <DeleteModal
-              confirmDelete={deleteTask}
-              closeModal={() => setShowDeleteModal(false)}
-            />
-          )}
-          <h2 className={styles.text}>Tarefas finalizadas</h2>
-          {completedTasks.map((task, index) => (
-            <div key={index} className={styles.taskItem}>
-              <div className={styles.boxText}>
-                <input
-                  type="checkbox"
-                  className={styles.checkboxCustom}
-                  onChange={() => completeTask(index)}
-                  checked
-                />
-                <label>{task}</label>
+            {showModal && (
+              <TaskModal
+                addTask={addTask}
+                closeModal={() => setShowModal(false)}
+              />
+            )}
+            {showDeleteModal && (
+              <DeleteModal
+                confirmDelete={deleteTask}
+                closeModal={() => setShowDeleteModal(false)}
+              />
+            )}
+            <h2 className={styles.text}>Tarefas finalizadas</h2>
+            {completedTasks.map((task, index) => (
+              <div key={index} className={styles.taskItem}>
+                <div className={styles.boxText}>
+                  <input
+                    type="checkbox"
+                    className={styles.checkboxCustom}
+                    onChange={() => completeTask(index)}
+                    checked
+                    disabled
+                  />
+                  <label>{task}</label>
+                </div>
+                <button
+                  className={styles.buttonIcon}
+                  onClick={() => openDeleteModal(index, true)}
+                >
+                  <Image
+                    className={styles.icon}
+                    src={trash}
+                    alt="trash"
+                    width={20}
+                    height={20}
+                  />
+                </button>
               </div>
-              <button
-                className={styles.buttonIcon}
-                onClick={() => openDeleteModal(index, true)}
-              >
-                <Image
-                  className={styles.icon}
-                  src={trash}
-                  alt="trash"
-                  width={20}
-                  height={20}
-                />
-              </button>
-            </div>
-          ))}
-        </div>
-        <button className={styles.button} onClick={() => setShowModal(true)}>
+            ))}
+          </div>
+          <button className={styles.button} onClick={() => setShowModal(true)}>
           Adicionar nova tarefa
         </button>
+        </div>
       </div>
     </div>
   );

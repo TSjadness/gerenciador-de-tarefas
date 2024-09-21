@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: auto;
 }
 
 .container {
@@ -16,6 +17,22 @@
   justify-content: center;
   padding: 10px;
   gap: 10px;
+}
+
+.containertwo {
+  width: 100%;
+  height: auto;
+  max-width: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(1, 95, 95);
+
+  .button {
+    background-color: #00a651;
+  }
 }
 
 .taskList {
@@ -32,6 +49,7 @@
 .taskItem {
   margin-bottom: 1.5rem;
   width: 100%;
+  max-width: 386px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -42,12 +60,12 @@
 }
 
 .taskItem:hover {
-  background-color: #EAECF0;
-  border: 1px solid #EAECF0;
+  background-color: #eaecf0;
+  border: 1px solid #eaecf0;
   cursor: pointer;
 }
 
-.boxText{
+.boxText {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,33 +73,28 @@
   gap: 10px;
 }
 
-
-
-
-.taskItem input[type="checkbox"]:checked+label{
+.taskItem input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   color: #1a1a1a;
   opacity: 0.5;
 }
 
-.icon{
+.icon {
   cursor: pointer;
   width: 18px;
   height: 20px;
-  color: #D7DDE9;
+  color: #d7dde9;
   border: none;
   background: none;
 }
-.buttonIcon{
+.buttonIcon {
   cursor: pointer;
   border: none;
   background: none;
 }
-.buttonIcon:hover{
+.buttonIcon:hover {
   background: none;
 }
-
-
 
 .text {
   font-size: 16px;
@@ -94,7 +107,8 @@
 }
 
 .button {
-  width: 100%;
+  max-width: auto;
+  width: 36rem;
   background: linear-gradient(90deg, #0796d3 0%, #53c0f0 68.65%);
   color: white;
   padding: 10px 20px;
@@ -122,46 +136,61 @@
   font: Arial, sans-serif;
 }
 
-
 .checkbox-custom {
   appearance: none;
   width: 24px;
   height: 24px;
-  border: 2px solid #00a0dc; 
+  border: 2px solid #00a0dc;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
   background-color: transparent;
   outline: none;
-  
+
   &:checked {
-    background-color: #a8dcf2; 
-    border-color: #00a0dc; 
+    background-color: #a8dcf2;
+    border-color: #00a0dc;
   }
 
   &:checked::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 4px;
     left: 4px;
     width: 12px;
     height: 12px;
     border-radius: 2px;
-    background-color: #00a651; 
-    clip-path: polygon(14% 44%, 0 62%, 50% 100%, 100% 29%, 84% 14%, 46% 73%); 
+    background-color: #00a651;
+    clip-path: polygon(14% 44%, 0 62%, 50% 100%, 100% 29%, 84% 14%, 46% 73%);
   }
 
   &:hover {
-    border-color: #008cba; 
+    border-color: #008cba;
   }
 }
 
-
-
-
-
-
 @media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .taskList {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {

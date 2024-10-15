@@ -23,7 +23,7 @@ export const Header = () => {
         </div>
 
         <div className={styles.text}>
-          <h1>Bem-vindo de volta, Marcus</h1>
+          <h1>Bem-vindo de volta, Usuário</h1>
         </div>
 
         <div className={styles.subtext}>
